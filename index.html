@@ -10,32 +10,44 @@
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-svg">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="module" src="assets/main.js" defer></script>
-    <title>Focus Timer</title>
+    <title>Focus Timer 2.0</title>
 </head>
 <body>
 
     <div class="container">
 
-        <button id="toggle-mode">
-            <span class="sr-only">Ativar Light Mode</span>
-            <i class="ph-bold ph-sun"></i>
-            <i class="ph-bold ph-moon"></i>
-        </button>
+        <div class="ticket">
+            <button id="toggle-mode">
+                <span class="sr-only">Ativar Light Mode</span>
+                <i class="ph-bold ph-sun"></i>
+                <i class="ph-bold ph-moon"></i>
+            </button>
+    
+            <section id="timer" class="flex">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+    
+            <section id="controls" class="flex">
+                <button data-action="toggleRunning" class="ph ph-play-circle"></button>
+                <button data-action="toggleRunning" class="ph ph-pause-circle"></button>
+                <button data-action="set" class="ph ph-timer secondary"></button>
+                <button data-action="reset" class="ph ph-stop-circle secondary"></button>
+                <button data-action="more" class="ph ph-plus"></button>
+                <button data-action="minus" class="ph ph-minus"></button>
+            </section>
 
-        <section id="timer" class="flex">
-            <span class="minutes">00</span>
-            <span>:</span>
-            <span class="seconds">00</span>
-        </section>
+        </div>
 
-        <section id="controls" class="flex">
-            <button data-action="toggleRunning" class="ph ph-play-circle"></button>
-            <button data-action="toggleRunning" class="ph ph-pause-circle"></button>
-            <button data-action="set" class="ph ph-timer secondary"></button>
-            <button data-action="reset" class="ph ph-stop-circle secondary"></button>
-            <button data-action="toggleMusic" class="ph ph-speaker-none secondary"></button>
-            <button data-action="toggleMusic" class="ph ph-speaker-high"></button>
-        </section>
+        <div class="control-music">
+            <section id="controls-music" class="flex">
+                <button data-action="naturals" class="ph ph-tree-evergreen"></button>
+                <button data-action="rain" class="ph ph-cloud-rain"></button>
+                <button data-action="coffee" class="ph ph-storefront"></button>
+                <button data-action="campfire" class="ph ph-campfire"></button>
+            </section>
+        </div>
     </div>
     
 </body>
