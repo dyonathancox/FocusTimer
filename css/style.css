@@ -154,7 +154,7 @@ html:not(.running) .ph-stop-circle {
   }
   #controls {
     padding: 0 1rem;
-    gap: 1rem;
+    gap: .8rem;
   }
   #controls-music {
     grid-template-columns: 1fr;
