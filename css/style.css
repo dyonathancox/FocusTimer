@@ -1,118 +1,117 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-:root{
-    font-size: clamp(40%, 1% + 2vw, 62.5%);
-    --hue: 194;
-    --bg-color: hsl(var(--hue), 5%, 7%);
-    --text-color: hsl(var(--hue), 40%, 98%);
-    --bg-btn-controls:  #242424;
-    --bg-controls: hsl(var(--hue), 100%, 63%);
-    --btn-secondary: hsl(var(--hue), 40%, 98%);
-    --bg-music: #E1E1E6;
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  --hue: 194;
+  --bg-color: hsl(var(--hue), 5%, 7%);
+  --text-color: hsl(var(--hue), 40%, 98%);
+  --bg-btn-controls: #242424;
+  --bg-controls: hsl(var(--hue), 100%, 63%);
+  --btn-secondary: hsl(var(--hue), 40%, 98%);
+  --bg-music: #e1e1e6;
 }
-body{
-    font-family: "Roboto", sans-serif;
-    background: var(--bg-color);
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--bg-color);
 }
-html.light{
-    --bg-color:hsl(var(--hue), 40%, 98%);
-    --text-color:hsl(var(--hue), 5%, 7%);
-    --bg-controls: #242424;
-    --btn-secondary: #242424;
-
+html.light {
+  --bg-color: hsl(var(--hue), 40%, 98%);
+  --text-color: hsl(var(--hue), 5%, 7%);
+  --bg-controls: #242424;
+  --btn-secondary: #242424;
 }
 html.light .ph-sun,
-html:not(.light) .ph-moon{
-    display: none;
+html:not(.light) .ph-moon {
+  display: none;
 }
 
-#toggle-mode{
-    position: absolute;
-    right: 3.2rem;
-    top: 3.2rem;
-    font-size: 3.2rem;
-    line-height: 0;
-    color: var(--text-color);
+#toggle-mode {
+  position: absolute;
+  right: 3.2rem;
+  top: 3.2rem;
+  font-size: 3.2rem;
+  line-height: 0;
+  color: var(--text-color);
 }
 .container {
-    width: 65rem;
-    margin: auto;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem; /* Adicione um espaço entre os elementos, se necessário */
+  width: 65rem;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Adicione um espaço entre os elementos, se necessário */
 }
-.ticket, .control-music {
-    flex: 1; /* Isso fará com que os elementos ocupem o mesmo espaço na linha */
+.ticket,
+.control-music {
+  flex: 1; /* Isso fará com que os elementos ocupem o mesmo espaço na linha */
 }
 .ticket {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#timer{
-    place-content: center;
-    font-size: 9.6rem;
-    color: var(--text-color);
-    font-weight: medium;
+#timer {
+  place-content: center;
+  font-size: 9.6rem;
+  color: var(--text-color);
+  font-weight: medium;
 }
-#controls{
-    padding: 0 4rem;
-    gap: 1.6rem;
+#controls {
+  padding: 0 4rem;
+  gap: 1.6rem;
 }
-button{
-    background-color: transparent;
-    color: var(--bg-controls);
-    border: none;
-    cursor: pointer;
-    font-size: 4.8rem;
+button {
+  background-color: transparent;
+  color: var(--bg-controls);
+  border: none;
+  cursor: pointer;
+  font-size: 4.8rem;
 }
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
-.secondary{
-    color: var(--btn-secondary);
+.secondary {
+  color: var(--btn-secondary);
 }
-.sr-only{
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    overflow: hidden;
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
 
-    margin: -1px;
-    padding: 0px;
-    border: 0;
-    appearance: none;
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
 }
 
 .control-music {
-    display: grid;
-    width: 50%;
-    align-items: center;
-    justify-items: center;
+  display: grid;
+  width: 50%;
+  align-items: center;
+  justify-items: center;
 }
 #controls-music {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3.2rem; /* Espaçamento entre os botões */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem; /* Espaçamento entre os botões */
 }
-#controls-music button{
-    padding: 2rem;
-    color: var(--bg-btn-controls);
-    background-color: var(--bg-music);
-    border-radius: 2.5rem;
-    width: 100px; /* Largura dos botões */
-    height: 100px; /* Altura dos botões */
-
+#controls-music button {
+  padding: 2rem;
+  color: var(--bg-btn-controls);
+  background-color: var(--bg-music);
+  border-radius: 2.5rem;
+  width: 100px; /* Largura dos botões */
+  height: 100px; /* Altura dos botões */
 }
 #controls-music button.active {
-    background-color: #02799D !important;
-    color: white;
+  background-color: #02799d !important;
+  color: white;
 }
 
 /*CONTROLS*/
@@ -120,6 +119,60 @@ button{
 .running .ph-play-circle,
 .running .ph-timer,
 html:not(.running) .ph-pause-circle,
-html:not(.running) .ph-stop-circle{
-    display: none;
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  .ticket,
+  .control-music {
+    width: 100%;
+    max-width: 100vw;
+  }
+  #timer {
+    font-size: clamp(4rem, 10vw, 7rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .ticket,
+  .control-music {
+    width: 100%;
+    max-width: 100vw;
+  }
+  #controls {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  #controls-music {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  #controls-music button {
+    width: 70vw;
+    max-width: 200px;
+    height: 60px;
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+  #toggle-mode {
+    right: 1.2rem;
+    top: 1.2rem;
+    font-size: 2.2rem;
+  }
+  #timer {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
 }
